@@ -40,7 +40,7 @@ test('regex ', function(){
     let test = newTest();
     doGreeting(test);
     test.sendButtonClick('POTD')
-        .expectImage(/https:\/\//)
+        .expectImage(/http:\/\//)
     return test.run();
 });
 
