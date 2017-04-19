@@ -36,6 +36,13 @@ test('profile v2', function(){
     return test.run();
 })
 
+test('regex ', function(){
+    let test = newTest();
+    doGreeting(test);
+    test.sendButtonClick('POTD')
+        .expectImage(/https:\/\//)
+    return test.run();
+});
 
 
 
