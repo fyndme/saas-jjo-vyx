@@ -42,6 +42,11 @@ newScript()
 newScript('POTD')
     .dialog((session, response) => {
       let promise = null;
+      if (session.user.platform === 'testing') {
+          promise = Promise.resolve({
+              url: 'https://nasa.gov/image.jpg'
+          })
+      } else {
         promise = request({
             uri: 'https://api.nasa.gov/planetary/apod',
             method: 'GET',
@@ -50,6 +55,7 @@ newScript('POTD')
             },
             json: true,
         })
+      }
       return promise.then(apod => {
             response.sendImage(apod.url);
         })
