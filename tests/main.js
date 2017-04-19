@@ -44,6 +44,14 @@ test('regex ', function(){
     return test.run();
 });
 
+test('mock', function(){
+    let test = newTest();
+    doGreeting(test);
+    test.sendButtonClick('POTD')
+        .expectImage('https://nasa.gov/image.jpg') 
+    return test.run();
+})
+
 
 
 
