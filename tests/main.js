@@ -1,3 +1,42 @@
+test('greeting', function() {
+    return newTest()
+        .expectText('Welcome to spacebot')
+        .expectText('I love space')
+        .run();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 test('greeting', function(){
     return newTest()
         .expectText('Welcome to spacebot')
@@ -50,3 +89,4 @@ test('potd mock', function(){
         .expectImage('https://image.jpg')
     return test.run();
 });
+*/
