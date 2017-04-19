@@ -33,7 +33,7 @@ function doGreeting(test) {
 test('profile v2', function(){
     let test = newTest();
     doGreeting(test);
-    return test.run();
+    return ttest.run();
 })
 
 
